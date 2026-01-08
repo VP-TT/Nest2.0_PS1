@@ -1,0 +1,35 @@
+**Top 3 Operational Fixes**
+
+1. Implement a Data Quality Initiative (DQI) dashboard that tracks Smart_DQI_Noisy, SAE_Pending_Count, and other relevant metrics in real-time, providing a comprehensive view of data quality across the study.
+2. Develop and deploy a prioritized SAE backlog management plan, focusing on identifying high-risk patients with significant SAE pending counts (e.g., >8) and assigning dedicated resources to resolve these issues.
+3. Establish a centralized tracking system for overdue visits, ensuring that all relevant stakeholders are informed of patient follow-up dates and can take corrective action to minimize delays.
+
+**Studies/Sites to Focus On**
+
+Based on the predicted future risks and SAE pending counts, focus on:
+
+1. Study 4 with Subject IDs: 2187, 2230, and 779
+2. Sites with high-risk patients (e.g., >6 SAE pending count)
+
+**Expected Effect on Risk and DQI**
+
+Implementing these operational fixes is expected to lead to:
+
+* Reduced risk of adverse events due to improved data quality and prioritized SAE backlog management.
+* Decreased DQI scores as a result of enhanced data monitoring and tracking.
+
+**Short-term vs Long-term Steps**
+
+**Short-term (next 2-4 weeks)**
+
+1. Deploy the DQI dashboard and prioritize SAE backlog resolution based on predicted future risks.
+2. Establish a centralized tracking system for overdue visits.
+3. Allocate additional resources to support high-priority sites with significant SAE pending counts.
+
+**Long-term (next 6-12 months)**
+
+1. Continue to refine and improve the DQI dashboard, incorporating regular analytics and insights to inform data-driven decision-making.
+2. Implement a comprehensive site activation plan, ensuring that all study sites are adequately prepared for high-risk patients.
+3. Develop a long-term strategy for SAE backlog management, including continuous monitoring and evaluation of risk factors.
+
+By focusing on these operational fixes, studies/sites with high-risk patients can be prioritized, reducing the likelihood of adverse events and improving data quality.

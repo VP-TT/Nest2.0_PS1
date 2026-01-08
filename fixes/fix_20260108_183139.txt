@@ -1,0 +1,23 @@
+Based on the provided data, here are the suggested actions:
+
+1. Top 3 operational fixes:
+   - Implement a thorough review of all SAE pending counts to identify and resolve any discrepancies or issues that may be contributing to the high-risk patients.
+   - Develop and implement a new data quality check process to improve Smart DQI Noisy values, focusing on identifying and correcting errors related to missing or inconsistent data entry.
+   - Establish clear and concise communication protocols between study teams, including regular team meetings and progress updates to ensure that all necessary documentation is completed in a timely manner.
+
+2. Which studies/sites to focus on:
+   Focus on Study 4 and the high-risk patients mentioned (Subjects 2187, 767, 7, 103, 776, 2230, 778, 779, 780, 781). These patients have the highest risk levels and the most significant pending SAE counts.
+
+3. Expected effect on risk and DQI:
+   - Resolving SAE pending issues: The number of high-risk patients (77.0) is expected to decrease as pending SAEs are addressed.
+   - Improving Smart DQI Noisy values: A reduction in the Smart DQI Noisy value (currently 56.5 for most subjects) will lead to a corresponding improvement in data quality, reducing the risk of errors and inconsistencies.
+
+4. Short-term vs long-term steps:
+   - Short-term steps (next 2-4 weeks):
+     * Complete a thorough review of SAE pending counts for Study 4.
+     * Develop and implement the new data quality check process.
+     * Establish clear communication protocols between study teams.
+   - Long-term steps (next 8-12 weeks):
+     * Implement ongoing monitoring and maintenance of the data quality check process to ensure its effectiveness.
+     * Continuously review and update the communication protocols to ensure they remain effective in supporting timely completion of necessary documentation.
+     * Regularly track progress and adjust operational strategies as needed to maintain a reduction in high-risk patients.

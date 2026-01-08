@@ -1,0 +1,51 @@
+
+=== NEST AI SYSTEM REPORT ===
+Date: 2026-01-08 18:35:50
+
+📍 SYSTEM SNAPSHOT
+DQI=86.3, HighRisk=12.2%, SAE=9908, Overdue=2309
+
+🔮 PREDICTIVE INSIGHT
+FutureRisk VeryHigh=763, AtRisk=0
+
+🚨 ALERTS TRIGGERED
+- PREDICT: 10 patients forecast to become high-risk soon.
+
+🛠️ RECOMMENDED ACTIONS
+**Top 3 Operational Fixes:**
+
+1. **Implement a Standardized SAE Process**: Establish a clear, structured process for reviewing and resolving SAEs to ensure consistency in decision-making and minimize backlogs. This may involve creating checklists, providing training for site staff, and setting deadlines for resolving outstanding SAEs.
+2. **Enhance Data Quality Monitoring and Auditing**: Increase the frequency and thoroughness of data quality checks, including manual reviews and automated checks using Smart DQI tools. Implement a regular auditing schedule to identify areas for improvement and address potential data discrepancies.
+3. **Prioritize and Manage Visits Effectively**: Develop a system to prioritize and manage study visits efficiently, ensuring that high-risk patients are visited promptly. Consider implementing a scheduling tool or workflow management software to streamline visit planning and coordination.
+
+**Which Studies/Sites to Focus On:**
+
+Based on the provided data, I recommend focusing on Study 4 for the following reasons:
+
+* The highest number of SAEs and Future Risks are associated with Study 4.
+* Multiple subjects (6 out of 10) have a high SAE_pending_count and Future_Risk, indicating potential quality issues or safety concerns.
+
+**Expected Effect on Risk and DQI:**
+
+By implementing the suggested operational fixes:
+
+* The risk for these patients is expected to decrease as pending SAEs are resolved and data quality improves.
+* Data Quality Index (DQI) scores should improve as the number of noisy data points decreases, allowing for more accurate patient profiles.
+
+**Short-term vs Long-term Steps:**
+
+**Short-term (Next 2-4 weeks):**
+
+1. Standardize the SAE process and train site staff.
+2. Increase data quality monitoring and auditing frequency.
+3. Prioritize and manage visits effectively using a scheduling tool or workflow management software.
+
+**Long-term (Next 12-24 weeks):**
+
+1. Implement regular auditing schedules to identify areas for improvement.
+2. Continuously monitor and evaluate the effectiveness of the standardized SAE process.
+3. Consider implementing additional operational fixes, such as enhanced patient engagement strategies or data visualization tools, to further improve study outcomes.
+
+Please note that these steps are recommendations based on the provided data and should be tailored to your specific clinical trial operations needs.
+
+=== END REPORT ===

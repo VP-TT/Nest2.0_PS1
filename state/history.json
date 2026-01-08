@@ -1,0 +1,896 @@
+[
+  {
+    "monitor": {
+      "Avg_DQI": 86.27,
+      "Total_Patients": 6237,
+      "High_Risk_Count": 763,
+      "High_Risk_Pct": 12.2,
+      "SAE_Pending_Total": 9908,
+      "Overdue_Visits_Total": 2309,
+      "Missing_Pages_Total": 130,
+      "Critical_Site_Count": 126
+    },
+    "rootcause": {
+      "Worst_Correlations": {
+        "SAE_Pending_Count": -0.706,
+        "Overdue_Visits_Count": -0.107,
+        "Missing_Pages": 0.001
+      },
+      "Worst_Study": "Study 4",
+      "Worst_Study_Metrics": {
+        "Smart_DQI_Noisy": 74.14,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      },
+      "Gap_Between_Best_And_Worst": {
+        "Smart_DQI_Noisy": -17.36,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      }
+    },
+    "bottleneck": {
+      "Worst_Study": "Study 4",
+      "Worst_Study_Avg_DQI": 74.14,
+      "Key_Drivers": {
+        "SAE_Pending_Count": 4.78,
+        "Missing_Pages": -0.0,
+        "Overdue_Visits_Count": -0.09
+      },
+      "Primary_Driver": "SAE_Pending_Count",
+      "Systemic_Risks": [],
+      "Bottleneck_Type": "Safety-Driven"
+    },
+    "predict": {
+      "Avg_Prob": 9.82,
+      "VeryHigh_Count": 763,
+      "AtRisk_Count": 763,
+      "Top_5": [
+        {
+          "Subject ID": "Subject 767",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 7",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 103",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 776",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 778",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        }
+      ]
+    },
+    "trend_summary": {},
+    "timestamp": "2026-01-08T14:33:42.350179"
+  },
+  {
+    "monitor": {
+      "Avg_DQI": 86.27,
+      "Total_Patients": 6237,
+      "High_Risk_Count": 763,
+      "High_Risk_Pct": 12.2,
+      "SAE_Pending_Total": 9908,
+      "Overdue_Visits_Total": 2309,
+      "Missing_Pages_Total": 130,
+      "Critical_Site_Count": 126
+    },
+    "rootcause": {
+      "Worst_Correlations": {
+        "SAE_Pending_Count": -0.706,
+        "Overdue_Visits_Count": -0.107,
+        "Missing_Pages": 0.001
+      },
+      "Worst_Study": "Study 4",
+      "Worst_Study_Metrics": {
+        "Smart_DQI_Noisy": 74.14,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      },
+      "Gap_Between_Best_And_Worst": {
+        "Smart_DQI_Noisy": -17.36,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      }
+    },
+    "bottleneck": {
+      "Worst_Study": "Study 4",
+      "Worst_Study_Avg_DQI": 74.14,
+      "Key_Drivers": {
+        "SAE_Pending_Count": 4.78,
+        "Missing_Pages": -0.0,
+        "Overdue_Visits_Count": -0.09
+      },
+      "Primary_Driver": "SAE_Pending_Count",
+      "Systemic_Risks": [],
+      "Bottleneck_Type": "Safety-Driven"
+    },
+    "predict": {
+      "Avg_Prob": 9.82,
+      "VeryHigh_Count": 763,
+      "AtRisk_Count": 763,
+      "Top_5": [
+        {
+          "Subject ID": "Subject 767",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 7",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 103",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 776",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 778",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        }
+      ]
+    },
+    "trend_summary": {},
+    "timestamp": "2026-01-08T14:34:14.664899"
+  },
+  {
+    "monitor": {
+      "Avg_DQI": 86.27,
+      "Total_Patients": 6237,
+      "High_Risk_Count": 763,
+      "High_Risk_Pct": 12.2,
+      "SAE_Pending_Total": 9908,
+      "Overdue_Visits_Total": 2309,
+      "Missing_Pages_Total": 130,
+      "Critical_Site_Count": 126
+    },
+    "rootcause": {
+      "Worst_Correlations": {
+        "SAE_Pending_Count": -0.706,
+        "Overdue_Visits_Count": -0.107,
+        "Missing_Pages": 0.001
+      },
+      "Worst_Study": "Study 4",
+      "Worst_Study_Metrics": {
+        "Smart_DQI_Noisy": 74.14,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      },
+      "Gap_Between_Best_And_Worst": {
+        "Smart_DQI_Noisy": -17.36,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      }
+    },
+    "bottleneck": {
+      "Worst_Study": "Study 4",
+      "Worst_Study_Avg_DQI": 74.14,
+      "Key_Drivers": {
+        "SAE_Pending_Count": 4.78,
+        "Missing_Pages": -0.0,
+        "Overdue_Visits_Count": -0.09
+      },
+      "Primary_Driver": "SAE_Pending_Count",
+      "Systemic_Risks": [],
+      "Bottleneck_Type": "Safety-Driven"
+    },
+    "predict": {
+      "Avg_Prob": 9.82,
+      "VeryHigh_Count": 763,
+      "AtRisk_Count": 763,
+      "Top_5": [
+        {
+          "Subject ID": "Subject 767",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 7",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 103",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 776",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 778",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        }
+      ]
+    },
+    "trend_summary": {
+      "DQI_Trend_5_Runs": 0.0,
+      "SAE_Trend_5_Runs": 0,
+      "High_Risk_Trend_5_Runs": 0
+    },
+    "timestamp": "2026-01-08T14:35:33.913411"
+  },
+  {
+    "monitor": {
+      "Avg_DQI": 86.27,
+      "Total_Patients": 6237,
+      "High_Risk_Count": 763,
+      "High_Risk_Pct": 12.2,
+      "SAE_Pending_Total": 9908,
+      "Overdue_Visits_Total": 2309,
+      "Missing_Pages_Total": 130,
+      "Critical_Site_Count": 126
+    },
+    "rootcause": {
+      "Worst_Correlations": {
+        "SAE_Pending_Count": -0.706,
+        "Overdue_Visits_Count": -0.107,
+        "Missing_Pages": 0.001
+      },
+      "Worst_Study": "Study 4",
+      "Worst_Study_Metrics": {
+        "Smart_DQI_Noisy": 74.14,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      },
+      "Gap_Between_Best_And_Worst": {
+        "Smart_DQI_Noisy": -17.36,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      }
+    },
+    "bottleneck": {
+      "Worst_Study": "Study 4",
+      "Worst_Study_Avg_DQI": 74.14,
+      "Key_Drivers": {
+        "SAE_Pending_Count": 4.78,
+        "Missing_Pages": -0.0,
+        "Overdue_Visits_Count": -0.09
+      },
+      "Primary_Driver": "SAE_Pending_Count",
+      "Systemic_Risks": [],
+      "Bottleneck_Type": "Safety-Driven"
+    },
+    "predict": {
+      "Avg_Prob": 9.82,
+      "VeryHigh_Count": 763,
+      "AtRisk_Count": 763,
+      "Top_5": [
+        {
+          "Subject ID": "Subject 767",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 7",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 103",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 776",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 778",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        }
+      ]
+    },
+    "trend_summary": {
+      "DQI_Trend_5_Runs": 0.0,
+      "SAE_Trend_5_Runs": 0,
+      "High_Risk_Trend_5_Runs": 0
+    },
+    "timestamp": "2026-01-08T14:41:16.736542"
+  },
+  {
+    "monitor": {
+      "Avg_DQI": 86.27,
+      "Total_Patients": 6237,
+      "High_Risk_Count": 763,
+      "High_Risk_Pct": 12.2,
+      "SAE_Pending_Total": 9908,
+      "Overdue_Visits_Total": 2309,
+      "Missing_Pages_Total": 130,
+      "Critical_Site_Count": 126
+    },
+    "rootcause": {
+      "Worst_Correlations": {
+        "SAE_Pending_Count": -0.706,
+        "Overdue_Visits_Count": -0.107,
+        "Missing_Pages": 0.001
+      },
+      "Worst_Study": "Study 4",
+      "Worst_Study_Metrics": {
+        "Smart_DQI_Noisy": 74.14,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      },
+      "Gap_Between_Best_And_Worst": {
+        "Smart_DQI_Noisy": -17.36,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      }
+    },
+    "bottleneck": {
+      "Worst_Study": "Study 4",
+      "Worst_Study_Avg_DQI": 74.14,
+      "Key_Drivers": {
+        "SAE_Pending_Count": 4.78,
+        "Missing_Pages": -0.0,
+        "Overdue_Visits_Count": -0.09
+      },
+      "Primary_Driver": "SAE_Pending_Count",
+      "Systemic_Risks": [],
+      "Bottleneck_Type": "Safety-Driven"
+    },
+    "predict": {
+      "Avg_Prob": 9.82,
+      "VeryHigh_Count": 763,
+      "AtRisk_Count": 763,
+      "Top_5": [
+        {
+          "Subject ID": "Subject 767",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 7",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 103",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 776",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 778",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        }
+      ]
+    },
+    "trend_summary": {
+      "DQI_Trend_5_Runs": 0.0,
+      "SAE_Trend_5_Runs": 0,
+      "High_Risk_Trend_5_Runs": 0
+    },
+    "timestamp": "2026-01-08T14:46:28.059078"
+  },
+  {
+    "monitor": {
+      "Avg_DQI": 86.27,
+      "Total_Patients": 6237,
+      "High_Risk_Count": 763,
+      "High_Risk_Pct": 12.2,
+      "SAE_Pending_Total": 9908,
+      "Overdue_Visits_Total": 2309,
+      "Missing_Pages_Total": 130,
+      "Critical_Site_Count": 126
+    },
+    "rootcause": {
+      "Worst_Correlations": {
+        "SAE_Pending_Count": -0.706,
+        "Overdue_Visits_Count": -0.107,
+        "Missing_Pages": 0.001
+      },
+      "Worst_Study": "Study 4",
+      "Worst_Study_Metrics": {
+        "Smart_DQI_Noisy": 74.14,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      },
+      "Gap_Between_Best_And_Worst": {
+        "Smart_DQI_Noisy": -17.36,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      }
+    },
+    "bottleneck": {
+      "Worst_Study": "Study 4",
+      "Worst_Study_Avg_DQI": 74.14,
+      "Key_Drivers": {
+        "SAE_Pending_Count": 4.78,
+        "Missing_Pages": -0.0,
+        "Overdue_Visits_Count": -0.09
+      },
+      "Primary_Driver": "SAE_Pending_Count",
+      "Systemic_Risks": [],
+      "Bottleneck_Type": "Safety-Driven"
+    },
+    "predict": {
+      "Avg_Prob": 9.82,
+      "VeryHigh_Count": 763,
+      "AtRisk_Count": 763,
+      "Top_5": [
+        {
+          "Subject ID": "Subject 767",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 7",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 103",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 776",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 778",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        }
+      ]
+    },
+    "trend_summary": {
+      "DQI_Trend_5_Runs": 0.0,
+      "SAE_Trend_5_Runs": 0,
+      "High_Risk_Trend_5_Runs": 0
+    },
+    "timestamp": "2026-01-08T14:46:38.692963"
+  },
+  {
+    "monitor": {
+      "Avg_DQI": 86.27,
+      "Total_Patients": 6237,
+      "High_Risk_Count": 763,
+      "High_Risk_Pct": 12.2,
+      "SAE_Pending_Total": 9908,
+      "Overdue_Visits_Total": 2309,
+      "Missing_Pages_Total": 130,
+      "Critical_Site_Count": 126
+    },
+    "rootcause": {
+      "Worst_Correlations": {
+        "SAE_Pending_Count": -0.706,
+        "Overdue_Visits_Count": -0.107,
+        "Missing_Pages": 0.001
+      },
+      "Worst_Study": "Study 4",
+      "Worst_Study_Metrics": {
+        "Smart_DQI_Noisy": 74.14,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      },
+      "Gap_Between_Best_And_Worst": {
+        "Smart_DQI_Noisy": -17.36,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      }
+    },
+    "bottleneck": {
+      "Worst_Study": "Study 4",
+      "Worst_Study_Avg_DQI": 74.14,
+      "Key_Drivers": {
+        "SAE_Pending_Count": 4.78,
+        "Missing_Pages": -0.0,
+        "Overdue_Visits_Count": -0.09
+      },
+      "Primary_Driver": "SAE_Pending_Count",
+      "Systemic_Risks": [],
+      "Bottleneck_Type": "Safety-Driven"
+    },
+    "predict": {
+      "Avg_Prob": 9.82,
+      "VeryHigh_Count": 763,
+      "AtRisk_Count": 763,
+      "Top_5": [
+        {
+          "Subject ID": "Subject 767",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 7",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 103",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 776",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 778",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        }
+      ]
+    },
+    "trend_summary": {
+      "DQI_Trend_5_Runs": 0.0,
+      "SAE_Trend_5_Runs": 0,
+      "High_Risk_Trend_5_Runs": 0
+    },
+    "timestamp": "2026-01-08T14:48:04.798497"
+  },
+  {
+    "monitor": {
+      "Avg_DQI": 86.27,
+      "Total_Patients": 6237,
+      "High_Risk_Count": 763,
+      "High_Risk_Pct": 12.2,
+      "SAE_Pending_Total": 9908,
+      "Overdue_Visits_Total": 2309,
+      "Missing_Pages_Total": 130,
+      "Critical_Site_Count": 126
+    },
+    "rootcause": {
+      "Worst_Correlations": {
+        "SAE_Pending_Count": -0.706,
+        "Overdue_Visits_Count": -0.107,
+        "Missing_Pages": 0.001
+      },
+      "Worst_Study": "Study 4",
+      "Worst_Study_Metrics": {
+        "Smart_DQI_Noisy": 74.14,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      },
+      "Gap_Between_Best_And_Worst": {
+        "Smart_DQI_Noisy": -17.36,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      }
+    },
+    "bottleneck": {
+      "Worst_Study": "Study 4",
+      "Worst_Study_Avg_DQI": 74.14,
+      "Key_Drivers": {
+        "SAE_Pending_Count": 4.78,
+        "Missing_Pages": -0.0,
+        "Overdue_Visits_Count": -0.09
+      },
+      "Primary_Driver": "SAE_Pending_Count",
+      "Systemic_Risks": [],
+      "Bottleneck_Type": "Safety-Driven"
+    },
+    "predict": {
+      "Avg_Prob": 9.82,
+      "VeryHigh_Count": 763,
+      "AtRisk_Count": 763,
+      "Top_5": [
+        {
+          "Subject ID": "Subject 767",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 7",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 103",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 776",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 778",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        }
+      ]
+    },
+    "trend_summary": {
+      "DQI_Trend_5_Runs": 0.0,
+      "SAE_Trend_5_Runs": 0,
+      "High_Risk_Trend_5_Runs": 0
+    },
+    "timestamp": "2026-01-08T14:52:37.707053"
+  },
+  {
+    "monitor": {
+      "Avg_DQI": 86.27,
+      "Total_Patients": 6237,
+      "High_Risk_Count": 763,
+      "High_Risk_Pct": 12.2,
+      "SAE_Pending_Total": 9908,
+      "Overdue_Visits_Total": 2309,
+      "Missing_Pages_Total": 130,
+      "Critical_Site_Count": 126
+    },
+    "rootcause": {
+      "Worst_Correlations": {
+        "SAE_Pending_Count": -0.706,
+        "Overdue_Visits_Count": -0.107,
+        "Missing_Pages": 0.001
+      },
+      "Worst_Study": "Study 4",
+      "Worst_Study_Metrics": {
+        "Smart_DQI_Noisy": 74.14,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      },
+      "Gap_Between_Best_And_Worst": {
+        "Smart_DQI_Noisy": -17.36,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      }
+    },
+    "bottleneck": {
+      "Worst_Study": "Study 4",
+      "Worst_Study_Avg_DQI": 74.14,
+      "Key_Drivers": {
+        "SAE_Pending_Count": 4.78,
+        "Missing_Pages": -0.0,
+        "Overdue_Visits_Count": -0.09
+      },
+      "Primary_Driver": "SAE_Pending_Count",
+      "Systemic_Risks": [],
+      "Bottleneck_Type": "Safety-Driven"
+    },
+    "predict": {
+      "Avg_Prob": 9.82,
+      "VeryHigh_Count": 763,
+      "AtRisk_Count": 763,
+      "Top_5": [
+        {
+          "Subject ID": "Subject 767",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 7",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 103",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 776",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 778",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        }
+      ]
+    },
+    "trend_summary": {
+      "DQI_Trend_5_Runs": 0.0,
+      "SAE_Trend_5_Runs": 0,
+      "High_Risk_Trend_5_Runs": 0
+    },
+    "timestamp": "2026-01-08T15:02:17.843759"
+  },
+  {
+    "monitor": {
+      "Avg_DQI": 86.27,
+      "Total_Patients": 6237,
+      "High_Risk_Count": 763,
+      "High_Risk_Pct": 12.2,
+      "SAE_Pending_Total": 9908,
+      "Overdue_Visits_Total": 2309,
+      "Missing_Pages_Total": 130,
+      "Critical_Site_Count": 126
+    },
+    "rootcause": {
+      "Worst_Correlations": {
+        "SAE_Pending_Count": -0.706,
+        "Overdue_Visits_Count": -0.107,
+        "Missing_Pages": 0.001
+      },
+      "Worst_Study": "Study 4",
+      "Worst_Study_Metrics": {
+        "Smart_DQI_Noisy": 74.14,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      },
+      "Gap_Between_Best_And_Worst": {
+        "Smart_DQI_Noisy": -17.36,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      }
+    },
+    "bottleneck": {
+      "Worst_Study": "Study 4",
+      "Worst_Study_Avg_DQI": 74.14,
+      "Key_Drivers": {
+        "SAE_Pending_Count": 4.78,
+        "Missing_Pages": -0.0,
+        "Overdue_Visits_Count": -0.09
+      },
+      "Primary_Driver": "SAE_Pending_Count",
+      "Systemic_Risks": [],
+      "Bottleneck_Type": "Safety-Driven"
+    },
+    "predict": {
+      "Avg_Prob": 9.82,
+      "VeryHigh_Count": 763,
+      "AtRisk_Count": 763,
+      "Top_5": [
+        {
+          "Subject ID": "Subject 767",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 7",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 103",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 776",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 778",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        }
+      ]
+    },
+    "trend_summary": {
+      "DQI_Trend_5_Runs": 0.0,
+      "SAE_Trend_5_Runs": 0,
+      "High_Risk_Trend_5_Runs": 0
+    },
+    "timestamp": "2026-01-08T15:06:19.931564"
+  },
+  {
+    "monitor": {
+      "Avg_DQI": 86.27,
+      "Total_Patients": 6237,
+      "High_Risk_Count": 763,
+      "High_Risk_Pct": 12.2,
+      "SAE_Pending_Total": 9908,
+      "Overdue_Visits_Total": 2309,
+      "Missing_Pages_Total": 130,
+      "Critical_Site_Count": 126
+    },
+    "rootcause": {
+      "Worst_Correlations": {
+        "SAE_Pending_Count": -0.706,
+        "Overdue_Visits_Count": -0.107,
+        "Missing_Pages": 0.001
+      },
+      "Worst_Study": "Study 4",
+      "Worst_Study_Metrics": {
+        "Smart_DQI_Noisy": 74.14,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      },
+      "Gap_Between_Best_And_Worst": {
+        "Smart_DQI_Noisy": -17.36,
+        "SAE_Pending_Count": 6.37,
+        "Overdue_Visits_Count": 0.28,
+        "Missing_Pages": 0.02
+      }
+    },
+    "bottleneck": {
+      "Worst_Study": "Study 4",
+      "Worst_Study_Avg_DQI": 74.14,
+      "Key_Drivers": {
+        "SAE_Pending_Count": 4.78,
+        "Missing_Pages": -0.0,
+        "Overdue_Visits_Count": -0.09
+      },
+      "Primary_Driver": "SAE_Pending_Count",
+      "Systemic_Risks": [],
+      "Bottleneck_Type": "Safety-Driven"
+    },
+    "predict": {
+      "Avg_Prob": 9.82,
+      "VeryHigh_Count": 763,
+      "AtRisk_Count": 763,
+      "Top_5": [
+        {
+          "Subject ID": "Subject 767",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 7",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 103",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 776",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        },
+        {
+          "Subject ID": "Subject 778",
+          "Study": "Study 4",
+          "Future_HighRisk_Probability": 80.3
+        }
+      ]
+    },
+    "trend_summary": {
+      "DQI_Trend_5_Runs": 0.0,
+      "SAE_Trend_5_Runs": 0,
+      "High_Risk_Trend_5_Runs": 0
+    },
+    "timestamp": "2026-01-08T15:24:18.499377"
+  }
+]
