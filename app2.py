@@ -65,6 +65,14 @@ def load_data():
 
 df, anomalies, study_comparison = load_data()
 
+@st.cache_resource
+def load_early_warning_model():
+    obj = joblib.load("early_warning_model.pkl")
+    return obj["model"], obj["features"]
+
+early_model, early_features = load_early_warning_model()
+
+
 # Sidebar
 st.sidebar.image("https://via.placeholder.com/200x80/1f77b4/ffffff?text=Novartis+NEST", use_container_width=True)
 st.sidebar.title("🏥 Clinical Trial DQI")
@@ -716,7 +724,7 @@ elif page == "📈 Insights & ROI":
 # GEN-AI MODEL SETUP
 # ============================================================================
 import os
-HF_TOKEN = os.getenv("HF_TOKEN")
+HF_API_KEY = os.getenv("HF_API_KEY")
 
 # ============================================================================
 # GEN-AI MODEL SETUP
@@ -1055,106 +1063,271 @@ def generate_study_pdf(study, ai_text, img1, img2):
     return buffer
 
 
-# # ========================================================================
-# # PAGE 8 :Early Warning Predictor
-# # ========================================================================
-# df, anomalies, study_comparison = load_data()
-# # ---------- SAFELY CREATE Total_Issues COLUMN ----------
-# if "Total_Issues" not in df.columns:
-#     df["Total_Issues"] = (
-#         df["SAE_Pending_Count"]
-#         + df["Overdue_Visits_Count"]
-#         + df["Missing_Pages"]
-#     )
+# ========================================================================
+# PAGE 8 :Early Warning Predictor
+# ========================================================================
+if page == "⚠️ Early Warning Predictor":
 
-# early_model, early_features = joblib.load("early_warning_model.pkl")
-# if page == "⚠️ Early Warning Predictor":
+    st.header("⚠️ Early Warning Predictor")
+    st.markdown("Predict patients **likely to become High-Risk soon**")
 
-#     st.header("⚠️ Early-Warning High-Risk Prediction System")
-#     st.markdown("Predict patients **likely to become High-Risk soon**")
+    # =================================================
+    # Feature consistency
+    # =================================================
+    if "Total_Issues" not in df.columns:
+        df["Total_Issues"] = (
+            df["SAE_Pending_Count"]
+            + df["Overdue_Visits_Count"]
+            + df["Missing_Pages"]
+        )
 
-#     # prepare features
-#     # ensure all expected features exist
-#     for c in early_features:
-#        if c not in df.columns:
-#           df[c] = 0
+    for c in early_features:
+        if c not in df.columns:
+            df[c] = 0
 
-#     X_new = df[early_features]
+    X = df[early_features]
 
-#     risk_prob = early_model.predict_proba(X_new)[:, 1]
+    # =================================================
+    # Patient-level prediction
+    # =================================================
+    probs = early_model.predict_proba(X)[:, 1]
+    df["Future_HighRisk_Probability"] = (probs * 100).round(1)
 
-#     df["Future_HighRisk_Probability"] = (risk_prob * 100).round(1)
+    # -------------------------------------------------
+    #️# Prediction confidence
+    # -------------------------------------------------
+    def confidence_level(p):
+        if p >= 80:
+            return "🔒 High Confidence"
+        elif p >= 60:
+            return "🟡 Medium Confidence"
+        else:
+            return "⚪ Low Confidence"
 
-#     # classify buckets
-#     def bucket(p):
-#         if p >= 70:
-#             return "🚨 Very Likely High-Risk"
-#         elif p >= 40:
-#             return "⚠️ At Risk"
-#         else:
-#             return "🟢 Stable"
+    df["Prediction_Confidence"] = df["Future_HighRisk_Probability"].apply(confidence_level)
 
-#     df["Early_Warning_Label"] = df["Future_HighRisk_Probability"].apply(bucket)
+    # -------------------------------------------------
+    # Risk bucket
+    # -------------------------------------------------
+    def risk_bucket(p):
+        if p >= 70:
+            return "🚨 Very Likely"
+        elif p >= 40:
+            return "⚠️ At Risk"
+        else:
+            return "🟢 Stable"
 
-#     st.subheader("📊 Prediction Summary")
+    df["Early_Warning_Status"] = df["Future_HighRisk_Probability"].apply(risk_bucket)
 
-#     c1, c2, c3 = st.columns(3)
-#     with c1:
-#         st.metric("🚨 Very Likely High-Risk", (df["Early_Warning_Label"] == "🚨 Very Likely High-Risk").sum())
-#     with c2:
-#         st.metric("⚠️ At Risk", (df["Early_Warning_Label"] == "⚠️ At Risk").sum())
-#     with c3:
-#         st.metric("🟢 Stable", (df["Early_Warning_Label"] == "🟢 Stable").sum())
+    # =================================================
+    # Summary metrics
+    # =================================================
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        st.metric("🚨 Very Likely", (df["Early_Warning_Status"] == "🚨 Very Likely").sum())
+    with c2:
+        st.metric("⚠️ At Risk", (df["Early_Warning_Status"] == "⚠️ At Risk").sum())
+    with c3:
+        st.metric("🟢 Stable", (df["Early_Warning_Status"] == "🟢 Stable").sum())
 
-#     st.markdown("---")
+    st.markdown("---")
 
-#     st.subheader("📋 Patient-Level Predictions")
+    # =================================================
+    # Patient-level table
+    # =================================================
+    st.subheader("📋 Patient-Level Early Warning")
 
-#     display = df[[
-#         "Subject ID",
-#         "Study",
-#         "Smart_DQI_Noisy",
-#         "SAE_Pending_Count",
-#         "Overdue_Visits_Count",
-#         "Missing_Pages",
-#         "Future_HighRisk_Probability",
-#         "Early_Warning_Label"
-#     ]].sort_values("Future_HighRisk_Probability", ascending=False)
+    display = df[[
+        "Subject ID",
+        "Study",
+        "Site ID",
+        "Smart_DQI_Noisy",
+        "SAE_Pending_Count",
+        "Overdue_Visits_Count",
+        "Missing_Pages",
+        "Future_HighRisk_Probability",
+        "Prediction_Confidence",
+        "Early_Warning_Status"
+    ]].sort_values("Future_HighRisk_Probability", ascending=False)
 
-#     st.dataframe(display, use_container_width=True, height=500)
+    st.dataframe(display, use_container_width=True, height=450)
 
-# st.subheader("🧠 Explain Prediction")
+    # =================================================
+    # CSV EXPORT (PATIENT)
+    # =================================================
+    st.download_button(
+        "⬇️ Download Patient Early Warning (CSV)",
+        data=display.to_csv(index=False).encode("utf-8"),
+        file_name="early_warning_patients.csv",
+        mime="text/csv"
+    )
 
-# pid = st.selectbox(
-#     "Select patient:",
-#     display["Subject ID"].astype(str).tolist()
-# )
+    # =================================================
+    # Patient explainability (Top contributing factors)
+    # =================================================
+    st.markdown("---")
+    st.subheader("🧠 Why is this patient at risk?")
 
-# if st.button("Explain risk score"):
-#     row = display[display["Subject ID"].astype(str) == pid].iloc[0]
+    def get_contributing_factors(row):
+        factors = []
+        if row["SAE_Pending_Count"] > 0:
+            factors.append("Pending SAE events")
+        if row["Overdue_Visits_Count"] > 0:
+            factors.append("Overdue patient visits")
+        if row["Missing_Pages"] > 0:
+            factors.append("Missing or incomplete data pages")
+        if row["Smart_DQI_Noisy"] < 80:
+            factors.append("Low data quality score (DQI)")
+        if not factors:
+            factors.append("No major data quality issues detected")
+        return factors
 
-#     prompt = f"""
-# Explain why this patient is at future high-risk.
+    pid = st.selectbox(
+        "Select Patient ID:",
+        display["Subject ID"].astype(str).tolist()
+    )
 
-# Use ONLY the numbers given.
+    if st.button("Explain Patient Risk"):
+        row = display[display["Subject ID"].astype(str) == pid].iloc[0]
+        factors = get_contributing_factors(row)
 
-# Patient: {pid}
-# Probability becoming high-risk: {row['Future_HighRisk_Probability']}%
+        st.success(
+            f"""
+**Risk Probability:** {row['Future_HighRisk_Probability']}%  
+**Prediction Confidence:** {row['Prediction_Confidence']}
 
-# Current Data:
-# DQI = {row['Smart_DQI_Noisy']}
-# SAE pending = {row['SAE_Pending_Count']}
-# Overdue visits = {row['Overdue_Visits_Count']}
-# Missing pages = {row['Missing_Pages']}
+**Key Contributing Factors:**
+"""
+            + "\n".join([f"• {f}" for f in factors])
+        )
 
-# Do NOT do math.
-# Do NOT change numbers.
-# Focus on data quality, monitoring risk, and operational reasons.
-# """
+    # =================================================
+    # 🏥 SITE-LEVEL EARLY WARNING
+    # =================================================
+    st.markdown("---")
+    st.header("🏥 Site-Level Early Warning")
 
-#     exp = call_genai(prompt)
-#     st.success(exp)
+    site_summary = df.groupby("Site ID").agg(
+        Total_Patients=("Subject ID", "count"),
+        Avg_DQI=("Smart_DQI_Noisy", "mean"),
+        HighRisk_Patients=("Early_Warning_Status", lambda x: (x == "🚨 Very Likely").sum()),
+        Avg_Risk_Prob=("Future_HighRisk_Probability", "mean"),
+        Total_SAE=("SAE_Pending_Count", "sum"),
+        Total_Overdue=("Overdue_Visits_Count", "sum"),
+        Total_Missing=("Missing_Pages", "sum")
+    ).reset_index()
 
+    site_summary["HighRisk_%"] = (
+        site_summary["HighRisk_Patients"]
+        / site_summary["Total_Patients"] * 100
+    ).round(1)
+
+    def site_bucket(p):
+        if p >= 30:
+            return "🚨 Critical Site"
+        elif p >= 15:
+            return "⚠️ At-Risk Site"
+        else:
+            return "🟢 Stable Site"
+
+    site_summary["Site_Risk_Level"] = site_summary["HighRisk_%"].apply(site_bucket)
+
+    site_display = site_summary.sort_values("HighRisk_%", ascending=False)[[
+        "Site ID",
+        "Total_Patients",
+        "HighRisk_%",
+        "Avg_DQI",
+        "Total_SAE",
+        "Total_Overdue",
+        "Total_Missing",
+        "Site_Risk_Level"
+    ]]
+
+    st.dataframe(site_display, use_container_width=True, height=400)
+
+    # =================================================
+    # CSV EXPORT (SITE)
+    # =================================================
+    st.download_button(
+        "⬇️ Download Site Risk Summary (CSV)",
+        data=site_display.to_csv(index=False).encode("utf-8"),
+        file_name="early_warning_sites.csv",
+        mime="text/csv"
+    )
+
+    # =================================================
+    # 📈 SITE RISK TREND (SIMULATED)
+    # =================================================
+    st.markdown("---")
+    st.subheader("📈 Site Risk Trend Over Time")
+
+    trend_df = site_summary.copy()
+    trend_df["Week -3"] = (trend_df["HighRisk_%"] * 0.7).round(1)
+    trend_df["Week -2"] = (trend_df["HighRisk_%"] * 0.85).round(1)
+    trend_df["Week -1"] = (trend_df["HighRisk_%"] * 0.95).round(1)
+    trend_df["Current"] = trend_df["HighRisk_%"]
+
+    site_trend = st.selectbox(
+    "Select site:",
+    trend_df["Site ID"].astype(str).tolist(),
+    key="site_trend_select"
+)
+
+
+    r = trend_df[trend_df["Site ID"].astype(str) == site_trend]
+    trend_plot = pd.DataFrame({
+        "Period": ["Week -3", "Week -2", "Week -1", "Current"],
+        "High Risk %": r[["Week -3", "Week -2", "Week -1", "Current"]].values.flatten()
+    })
+
+    st.plotly_chart(
+        px.line(trend_plot, x="Period", y="High Risk %", markers=True),
+        use_container_width=True
+    )
+
+    # =================================================
+    # 🗺️ SITE RISK HEATMAP
+    # =================================================
+    st.markdown("---")
+    st.subheader("🗺️ Site Risk Heatmap")
+
+    heatmap_data = site_summary.set_index("Site ID")[[
+        "HighRisk_%", "Total_SAE", "Total_Overdue", "Total_Missing"
+    ]]
+
+    st.plotly_chart(
+        px.imshow(heatmap_data, color_continuous_scale="Reds", aspect="auto"),
+        use_container_width=True
+    )
+
+    # =================================================
+    # 📄 AUTO-GENERATED SITE ACTION PLAN
+    # =================================================
+    st.markdown("---")
+    st.subheader("📄 Auto-Generated Site Action Plan")
+
+    site_plan = st.selectbox(
+    "Select site:",
+    site_summary["Site ID"].astype(str).tolist(),
+    key="site_action_plan_select"
+)
+
+
+    r = site_summary[site_summary["Site ID"].astype(str) == site_plan].iloc[0]
+    actions = []
+
+    if r["HighRisk_%"] >= 30:
+        actions.append("Increase site monitoring frequency immediately.")
+    if r["Total_SAE"] >= 10:
+        actions.append("Prioritize SAE reconciliation and safety review.")
+    if r["Total_Overdue"] >= 15:
+        actions.append("Deploy CRA support to resolve overdue visits.")
+    if r["Avg_DQI"] < 80:
+        actions.append("Conduct focused data quality audit and retraining.")
+    if not actions:
+        actions.append("Continue routine monitoring. No immediate action required.")
+
+    st.success("### Recommended Actions:\n" + "\n".join([f"- {a}" for a in actions]))
 
 
 # ========================================================================
